@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|c:\\users\\kagan\\desktop\\pipedstatusproject\\unifiedconsole\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|solutionrelative:unifiedconsole\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\unifiedconsole\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|solutionrelative:unifiedconsole\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\pipeprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\pipeprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\fastbitparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\fastbitparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\compiledschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\compiledschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\throttleduiupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\throttleduiupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\pipebridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\pipebridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\unifiedconsole\\perfprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|solutionrelative:unifiedconsole\\perfprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\unifiedconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F6A7B8-89AB-CDEF-0123-456789ABCDEF}|UnifiedConsole\\UnifiedConsole.csproj|solutionrelative:unifiedconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\pipedatastream.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\pipedatastream.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\systemconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\systemconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|C:\\Users\\kagan\\Desktop\\PipedStatusProject\\shared\\bitparser\\datasources\\udpdatasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-1234-5678-9ABC-DEF012345678}|Shared\\BitParser\\BitParser.csproj|solutionrelative:shared\\bitparser\\datasources\\udpdatasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\MainForm.cs",
+              "RelativeDocumentMoniker": "UnifiedConsole\\MainForm.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\MainForm.cs [Design]",
+              "RelativeToolTip": "UnifiedConsole\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:40:45.648Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\MainForm.cs",
+              "RelativeDocumentMoniker": "UnifiedConsole\\MainForm.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\MainForm.cs",
+              "RelativeToolTip": "UnifiedConsole\\MainForm.cs",
+              "ViewState": "AgIAAPgCAAAAAAAAAAAlwAMDAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:40:46.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThrottledUIUpdater.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\ThrottledUIUpdater.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\ThrottledUIUpdater.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\ThrottledUIUpdater.cs",
+              "RelativeToolTip": "Shared\\BitParser\\ThrottledUIUpdater.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:36:31.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompiledSchema.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\CompiledSchema.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\CompiledSchema.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\CompiledSchema.cs",
+              "RelativeToolTip": "Shared\\BitParser\\CompiledSchema.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAlwHoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:33:42.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\Program.cs",
+              "RelativeDocumentMoniker": "UnifiedConsole\\Program.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\Program.cs",
+              "RelativeToolTip": "UnifiedConsole\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:38:19.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FastBitParser.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\FastBitParser.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\FastBitParser.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\FastBitParser.cs",
+              "RelativeToolTip": "Shared\\BitParser\\FastBitParser.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAnwMkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:34:44.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PipeProtocol.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeProtocol.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\PipeProtocol.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeProtocol.cs",
+              "RelativeToolTip": "Shared\\BitParser\\PipeProtocol.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwDkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T15:20:25.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PipeBridge.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeBridge.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\PipeBridge.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeBridge.cs",
+              "RelativeToolTip": "Shared\\BitParser\\PipeBridge.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAcwBUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T23:32:54.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PerfProtocol.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\PerfProtocol.cs",
+              "RelativeDocumentMoniker": "UnifiedConsole\\PerfProtocol.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\UnifiedConsole\\PerfProtocol.cs",
+              "RelativeToolTip": "UnifiedConsole\\PerfProtocol.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T09:38:15.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PipeDataStream.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeDataStream.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\PipeDataStream.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\PipeDataStream.cs",
+              "RelativeToolTip": "Shared\\BitParser\\PipeDataStream.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T15:20:27.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SystemConfig.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\SystemConfig.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\SystemConfig.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\SystemConfig.cs",
+              "RelativeToolTip": "Shared\\BitParser\\SystemConfig.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAIwEgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T14:50:01.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UdpDataSource.cs",
+              "DocumentMoniker": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\DataSources\\UdpDataSource.cs",
+              "RelativeDocumentMoniker": "Shared\\BitParser\\DataSources\\UdpDataSource.cs",
+              "ToolTip": "C:\\Users\\kagan\\Desktop\\PipedStatusProject\\Shared\\BitParser\\DataSources\\UdpDataSource.cs",
+              "RelativeToolTip": "Shared\\BitParser\\DataSources\\UdpDataSource.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAuwCsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T14:44:55.413Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

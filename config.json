@@ -1,0 +1,77 @@
+{
+  "SystemName": "FPGA Test System",
+  "Version": "1.0.0",
+  
+  "Schema": {
+    "Path": "Schema\\CbitSchema.xml",
+    "AutoLoad": true
+  },
+  
+  "DataSource": {
+    "Type": "Simulation",
+    "SimulationIntervalMs": 50,
+    "PipeName": "BitStatusPipe"
+  },
+  
+  "Tests": {
+    "AutoRunOnStartup": true,
+    "StopOnFirstFailure": false,
+    "Categories": ["Configuration", "Power", "Communication", "Network"],
+    "Sequence": [
+      { "Name": "Configuration Load", "Enabled": true, "TimeoutSec": 30 },
+      { "Name": "Power Supply", "Enabled": true, "TimeoutSec": 60 },
+      { "Name": "Message Conformity", "Enabled": true, "TimeoutSec": 30 },
+      { "Name": "Ping Test", "Enabled": true, "TimeoutSec": 30 },
+      { "Name": "Timing Test", "Enabled": true, "TimeoutSec": 60 },
+      { "Name": "Memory Integrity", "Enabled": true, "TimeoutSec": 60 },
+      { "Name": "Stress Test", "Enabled": false, "TimeoutSec": 120 }
+    ]
+  },
+  
+  "EthernetTest": {
+    "Enabled": true,
+    "AutoStart": true,
+    "UpdateIntervalMs": 40,
+    "DurationSeconds": 30,
+    "PortMapping": {
+      "SourcePorts": [1, 2, 3, 4, 5, 6, 7, 8],
+      "DestinationPorts": [9, 10, 11, 12, 13, 14, 15, 16]
+    }
+  },
+  
+  "StatusMonitor": {
+    "Enabled": true,
+    "AutoConnect": true,
+    "UpdateRateFps": 30,
+    "CsvLogging": {
+      "Enabled": true,
+      "IntervalSeconds": 1,
+      "Directory": "logs"
+    }
+  },
+  
+  "Network": {
+    "PingTargets": ["127.0.0.1", "192.168.1.1"],
+    "TimeoutMs": 3000
+  },
+  
+  "PowerLimits": {
+    "3.3V": { "Min": 3.1, "Max": 3.5 },
+    "5.0V": { "Min": 4.75, "Max": 5.25 },
+    "12V": { "Min": 11.4, "Max": 12.6 }
+  },
+  
+  "Logging": {
+    "ConsoleEnabled": true,
+    "FileEnabled": true,
+    "LogDirectory": "logs",
+    "MaxFileSizeMB": 50
+  },
+  
+  "UI": {
+    "ShowDetailedLog": true,
+    "AutoScrollLog": true,
+    "Theme": "Dark",
+    "FontSize": 10
+  }
+}

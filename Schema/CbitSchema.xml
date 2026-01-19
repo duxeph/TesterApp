@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  CbitSchema.xml - New format with cbit/sub structure
+  
+  Features:
+  - resolution: Multiply raw value by this factor
+  - bias: Add this value after resolution multiplication
+  - min/max: Valid range for computed value (red if outside)
+  - fault: Fault value (red if equals this)
+  - visible: Show in UI (1=yes, 0=no)
+  
+  Formula: computed_value = (raw_value * resolution) + bias
+  Validation: min <= computed_value <= max, and computed_value != fault
+-->
+<root totalBytes="256">
+  
+  <!-- FPGA Version: Bytes 0-7 -->
+  <cbit Name="FPGA Version" visible="1" offset="0" length="8">
+    <sub Name="Major Version" sub_offset="0" mask="0x0000FFFF" length="4"/>
+    <sub Name="Minor Version" sub_offset="4" mask="0xFFFF0000" length="4"/>
+  </cbit>
+  
+  <!-- Power Supplies: Bytes 8-15 -->
+  <cbit Name="Power" visible="1" offset="8" length="8">
+    <sub Name="Primary Voltage" sub_offset="0" mask="0x0000FFFF" length="4" resolution="0.001" bias="0" max="5.5" min="4.5" unit="V"/>
+    <sub Name="Secondary Voltage" sub_offset="4" mask="0x0000FFFF" length="4" resolution="0.001" bias="0" max="3.5" min="3.1" unit="V"/>
+  </cbit>
+  
+  <!-- Temperature Sensors: Bytes 16-23 -->
+  <cbit Name="Temperature" visible="1" offset="16" length="8">
+    <sub Name="Board Temp" sub_offset="0" mask="0x0000FFFF" length="4" resolution="0.01" bias="-40" max="85" min="-20" unit="°C"/>
+    <sub Name="FPGA Temp" sub_offset="4" mask="0x0000FFFF" length="4" resolution="0.01" bias="-40" max="100" min="-20" unit="°C"/>
+  </cbit>
+  
+  <!-- System Status Flags: Bytes 24-27 -->
+  <cbit Name="System Status" visible="1" offset="24" length="4">
+    <sub Name="Power Good" sub_offset="0" mask="0x00000001" length="4" fault="0"/>
+    <sub Name="Clock Locked" sub_offset="0" mask="0x00000002" length="4" fault="0"/>
+    <sub Name="PLL Stable" sub_offset="0" mask="0x00000004" length="4" fault="0"/>
+    <sub Name="FPGA Ready" sub_offset="0" mask="0x00000008" length="4" fault="0"/>
+    <sub Name="Error Flag" sub_offset="0" mask="0x00000010" length="4" fault="1"/>
+    <sub Name="Warning Flag" sub_offset="0" mask="0x00000020" length="4" fault="1"/>
+    <sub Name="Calibration OK" sub_offset="0" mask="0x00000040" length="4" fault="0"/>
+    <sub Name="Comms Active" sub_offset="0" mask="0x00000080" length="4" fault="0"/>
+  </cbit>
+  
+  <!-- Error Code: Bytes 28-31 -->
+  <cbit Name="Error Register" visible="1" offset="28" length="4">
+    <sub Name="Error Code" sub_offset="0" mask="0x0000FFFF" length="4" fault="0"/>
+    <sub Name="Error Count" sub_offset="0" mask="0xFFFF0000" length="4" max="100" min="0"/>
+  </cbit>
+  
+  <!-- Current Sensors: Bytes 32-39 -->
+  <cbit Name="Current Sensors" visible="1" offset="32" length="8">
+    <sub Name="Input Current" sub_offset="0" mask="0x0000FFFF" length="4" resolution="0.001" bias="0" max="2.5" min="0" unit="A"/>
+    <sub Name="Output Current" sub_offset="4" mask="0x0000FFFF" length="4" resolution="0.001" bias="0" max="1.5" min="0" unit="A"/>
+  </cbit>
+  
+  <!-- ADC Channels: Bytes 40-55 -->
+  <cbit Name="ADC Channel 0-1" visible="1" offset="40" length="8">
+    <sub Name="ADC CH0" sub_offset="0" mask="0x0000FFFF" length="4" resolution="0.000305" bias="0" max="10.0" min="-10.0" unit="V"/>
+    <sub Name="ADC CH1" sub_offset="4" mask="0x0000FFFF" length="4" resolution="0.000305" bias="0" max="10.0" min="-10.0" unit="V"/>
+  </cbit>
+  
+  <cbit Name="ADC Channel 2-3" visible="1" offset="48" length="8">
+    <sub Name="ADC CH2" sub_offset="0" mask="0x0000FFFF" length="4" resolution="0.000305" bias="0" max="10.0" min="-10.0" unit="V"/>
+    <sub Name="ADC CH3" sub_offset="4" mask="0x0000FFFF" length="4" resolution="0.000305" bias="0" max="10.0" min="-10.0" unit="V"/>
+  </cbit>
+  
+  <!-- Counters: Bytes 56-63 -->
+  <cbit Name="Counters" visible="1" offset="56" length="8">
+    <sub Name="Packet Count" sub_offset="0" mask="0xFFFFFFFF" length="4"/>
+    <sub Name="Error Packets" sub_offset="4" mask="0xFFFFFFFF" length="4" max="10" min="0"/>
+  </cbit>
+  
+  <!-- Timestamps: Bytes 64-71 -->
+  <cbit Name="Timestamp" visible="1" offset="64" length="8">
+    <sub Name="Timestamp Low" sub_offset="0" mask="0xFFFFFFFF" length="4"/>
+    <sub Name="Timestamp High" sub_offset="4" mask="0xFFFFFFFF" length="4"/>
+  </cbit>
+
+</root>

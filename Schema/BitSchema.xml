@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  BitSchema.xml - Original format with bit-level definitions
+  Now includes fault flags for error tracking
+  
+  New attributes on <field>:
+  - min/max: Valid range for computed value
+  - fault: Value that indicates fault condition
+  - Bias: Value added after resolution multiplication
+  
+  Formula: computed_value = (raw_value * Resolution) + Bias
+-->
+<BitSchema version="1.0" totalBytes="1536">
+  
+  <!-- WORD 0: FPGA Version (Bytes 0-3) -->
+  <cbit 
+    Name="FpgaVersion" 
+    Offset="0" 
+    Size="4"
+    Mask="0x00FFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="MainVersion_b0" bit_1="MainVersion_b1" bit_2="MainVersion_b2" bit_3="MainVersion_b3" 
+    bit_4="MainVersion_b4" bit_5="MainVersion_b5" bit_6="MainVersion_b6" bit_7="MainVersion_b7"
+    bit_8="SubVersion_b0" bit_9="SubVersion_b1" bit_10="SubVersion_b2" bit_11="SubVersion_b3" 
+    bit_12="SubVersion_b4" bit_13="SubVersion_b5" bit_14="SubVersion_b6" bit_15="SubVersion_b7"
+    bit_16="BuildNumber_b0" bit_17="BuildNumber_b1" bit_18="BuildNumber_b2" bit_19="BuildNumber_b3" 
+    bit_20="BuildNumber_b4" bit_21="BuildNumber_b5" bit_22="BuildNumber_b6" bit_23="BuildNumber_b7"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <field Name="MainVersion" StartBit="0" EndBit="7" Mask="0x000000FF" Resolution="1" />
+    <field Name="SubVersion" StartBit="8" EndBit="15" Mask="0x0000FF00" Resolution="1" />
+    <field Name="BuildNumber" StartBit="16" EndBit="23" Mask="0x00FF0000" Resolution="1" />
+  </cbit>
+
+  <!-- WORD 1: System Status Flags (Bytes 4-7) - With fault flags -->
+  <cbit 
+    Name="SystemStatus" 
+    Offset="4" 
+    Size="4"
+    Mask="0xFFFFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="PowerGood" bit_1="ClockLocked" bit_2="PllStable" bit_3="TempOk" 
+    bit_4="VoltageOk" bit_5="CommsActive" bit_6="DataValid" bit_7="SyncAcquired"
+    bit_8="ErrorFlag" bit_9="WarningFlag" bit_10="CalibrationDone" bit_11="InitComplete" 
+    bit_12="Reserved" bit_13="Reserved" bit_14="Reserved" bit_15="Reserved"
+    bit_16="Channel0Active" bit_17="Channel1Active" bit_18="Channel2Active" bit_19="Channel3Active" 
+    bit_20="Channel4Active" bit_21="Channel5Active" bit_22="Channel6Active" bit_23="Channel7Active"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <!-- These fields have fault flags -->
+    <field Name="PowerGood" StartBit="0" EndBit="0" Mask="0x00000001" Resolution="1" fault="0"/>
+    <field Name="ClockLocked" StartBit="1" EndBit="1" Mask="0x00000002" Resolution="1" fault="0"/>
+    <field Name="PllStable" StartBit="2" EndBit="2" Mask="0x00000004" Resolution="1" fault="0"/>
+    <field Name="ErrorFlag" StartBit="8" EndBit="8" Mask="0x00000100" Resolution="1" fault="1"/>
+    <field Name="WarningFlag" StartBit="9" EndBit="9" Mask="0x00000200" Resolution="1" fault="1"/>
+  </cbit>
+
+  <!-- WORD 2: Error Code (Bytes 8-11) -->
+  <cbit 
+    Name="ErrorCode" 
+    Offset="8" 
+    Size="4"
+    Mask="0x0000FFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="ErrCode_b0" bit_1="ErrCode_b1" bit_2="ErrCode_b2" bit_3="ErrCode_b3" 
+    bit_4="ErrCode_b4" bit_5="ErrCode_b5" bit_6="ErrCode_b6" bit_7="ErrCode_b7"
+    bit_8="ErrCode_b8" bit_9="ErrCode_b9" bit_10="ErrCode_b10" bit_11="ErrCode_b11" 
+    bit_12="ErrCode_b12" bit_13="ErrCode_b13" bit_14="ErrCode_b14" bit_15="ErrCode_b15"
+    bit_16="Reserved" bit_17="Reserved" bit_18="Reserved" bit_19="Reserved" 
+    bit_20="Reserved" bit_21="Reserved" bit_22="Reserved" bit_23="Reserved"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <!-- Error code: fault if non-zero -->
+    <field Name="ErrorCode" StartBit="0" EndBit="15" Mask="0x0000FFFF" Resolution="1" fault="0" max="0"/>
+  </cbit>
+
+  <!-- WORD 3: Temperature (Bytes 12-15) - With min/max limits -->
+  <cbit 
+    Name="Temperature" 
+    Offset="12" 
+    Size="4"
+    Mask="0x0000FFFF"
+    Resolution="0.01"
+    Visible="true"
+    bit_0="Temp_b0" bit_1="Temp_b1" bit_2="Temp_b2" bit_3="Temp_b3" 
+    bit_4="Temp_b4" bit_5="Temp_b5" bit_6="Temp_b6" bit_7="Temp_b7"
+    bit_8="Temp_b8" bit_9="Temp_b9" bit_10="Temp_b10" bit_11="Temp_b11" 
+    bit_12="Temp_b12" bit_13="Temp_b13" bit_14="Temp_b14" bit_15="Temp_b15"
+    bit_16="Reserved" bit_17="Reserved" bit_18="Reserved" bit_19="Reserved" 
+    bit_20="Reserved" bit_21="Reserved" bit_22="Reserved" bit_23="Reserved"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <!-- Temperature: valid range 0-85°C -->
+    <field Name="TemperatureValue" StartBit="0" EndBit="15" Mask="0x0000FFFF" 
+           Resolution="0.01" Bias="0" min="0" max="85" Unit="°C" />
+  </cbit>
+
+  <!-- WORD 4: Voltage (Bytes 16-19) - With min/max limits -->
+  <cbit 
+    Name="VoltageMonitor" 
+    Offset="16" 
+    Size="4"
+    Mask="0x00000FFF"
+    Resolution="0.001"
+    Visible="true"
+    bit_0="Voltage_b0" bit_1="Voltage_b1" bit_2="Voltage_b2" bit_3="Voltage_b3" 
+    bit_4="Voltage_b4" bit_5="Voltage_b5" bit_6="Voltage_b6" bit_7="Voltage_b7"
+    bit_8="Voltage_b8" bit_9="Voltage_b9" bit_10="Voltage_b10" bit_11="Voltage_b11" 
+    bit_12="Reserved" bit_13="Reserved" bit_14="Reserved" bit_15="Reserved"
+    bit_16="Reserved" bit_17="Reserved" bit_18="Reserved" bit_19="Reserved" 
+    bit_20="Reserved" bit_21="Reserved" bit_22="Reserved" bit_23="Reserved"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <!-- Voltage: valid range 3.1-3.5V -->
+    <field Name="VoltageValue" StartBit="0" EndBit="11" Mask="0x00000FFF" 
+           Resolution="0.001" Bias="0" min="3.1" max="3.5" Unit="V" />
+  </cbit>
+
+  <!-- WORD 5: Packet Counter (Bytes 20-23) -->
+  <cbit 
+    Name="PacketCounter" 
+    Offset="20" 
+    Size="4"
+    Mask="0xFFFFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="Counter_b0" bit_1="Counter_b1" bit_2="Counter_b2" bit_3="Counter_b3" 
+    bit_4="Counter_b4" bit_5="Counter_b5" bit_6="Counter_b6" bit_7="Counter_b7"
+    bit_8="Counter_b8" bit_9="Counter_b9" bit_10="Counter_b10" bit_11="Counter_b11" 
+    bit_12="Counter_b12" bit_13="Counter_b13" bit_14="Counter_b14" bit_15="Counter_b15"
+    bit_16="Counter_b16" bit_17="Counter_b17" bit_18="Counter_b18" bit_19="Counter_b19" 
+    bit_20="Counter_b20" bit_21="Counter_b21" bit_22="Counter_b22" bit_23="Counter_b23"
+    bit_24="Counter_b24" bit_25="Counter_b25" bit_26="Counter_b26" bit_27="Counter_b27" 
+    bit_28="Counter_b28" bit_29="Counter_b29" bit_30="Counter_b30" bit_31="Counter_b31">
+    
+    <field Name="PacketCount" StartBit="0" EndBit="31" Mask="0xFFFFFFFF" Resolution="1" />
+  </cbit>
+
+  <!-- WORD 6: Timestamp Low (Bytes 24-27) -->
+  <cbit 
+    Name="TimestampLow" 
+    Offset="24" 
+    Size="4"
+    Mask="0xFFFFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="TSLow_b0" bit_1="TSLow_b1" bit_2="TSLow_b2" bit_3="TSLow_b3" 
+    bit_4="TSLow_b4" bit_5="TSLow_b5" bit_6="TSLow_b6" bit_7="TSLow_b7"
+    bit_8="TSLow_b8" bit_9="TSLow_b9" bit_10="TSLow_b10" bit_11="TSLow_b11" 
+    bit_12="TSLow_b12" bit_13="TSLow_b13" bit_14="TSLow_b14" bit_15="TSLow_b15"
+    bit_16="TSLow_b16" bit_17="TSLow_b17" bit_18="TSLow_b18" bit_19="TSLow_b19" 
+    bit_20="TSLow_b20" bit_21="TSLow_b21" bit_22="TSLow_b22" bit_23="TSLow_b23"
+    bit_24="TSLow_b24" bit_25="TSLow_b25" bit_26="TSLow_b26" bit_27="TSLow_b27" 
+    bit_28="TSLow_b28" bit_29="TSLow_b29" bit_30="TSLow_b30" bit_31="TSLow_b31">
+  </cbit>
+
+  <!-- WORD 7: Timestamp High (Bytes 28-31) -->
+  <cbit 
+    Name="TimestampHigh" 
+    Offset="28" 
+    Size="4"
+    Mask="0xFFFFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="TSHigh_b0" bit_1="TSHigh_b1" bit_2="TSHigh_b2" bit_3="TSHigh_b3" 
+    bit_4="TSHigh_b4" bit_5="TSHigh_b5" bit_6="TSHigh_b6" bit_7="TSHigh_b7"
+    bit_8="TSHigh_b8" bit_9="TSHigh_b9" bit_10="TSHigh_b10" bit_11="TSHigh_b11" 
+    bit_12="TSHigh_b12" bit_13="TSHigh_b13" bit_14="TSHigh_b14" bit_15="TSHigh_b15"
+    bit_16="TSHigh_b16" bit_17="TSHigh_b17" bit_18="TSHigh_b18" bit_19="TSHigh_b19" 
+    bit_20="TSHigh_b20" bit_21="TSHigh_b21" bit_22="TSHigh_b22" bit_23="TSHigh_b23"
+    bit_24="TSHigh_b24" bit_25="TSHigh_b25" bit_26="TSHigh_b26" bit_27="TSHigh_b27" 
+    bit_28="TSHigh_b28" bit_29="TSHigh_b29" bit_30="TSHigh_b30" bit_31="TSHigh_b31">
+  </cbit>
+
+  <!-- WORD 8: Channel 0 (Bytes 32-35) - ADC with limits -->
+  <cbit 
+    Name="Channel0" 
+    Offset="32" 
+    Size="4"
+    Mask="0xFFFFFFFF"
+    Resolution="1"
+    Visible="true"
+    bit_0="CH0_ADC_b0" bit_1="CH0_ADC_b1" bit_2="CH0_ADC_b2" bit_3="CH0_ADC_b3" 
+    bit_4="CH0_ADC_b4" bit_5="CH0_ADC_b5" bit_6="CH0_ADC_b6" bit_7="CH0_ADC_b7"
+    bit_8="CH0_ADC_b8" bit_9="CH0_ADC_b9" bit_10="CH0_ADC_b10" bit_11="CH0_ADC_b11" 
+    bit_12="CH0_ADC_b12" bit_13="CH0_ADC_b13" bit_14="CH0_ADC_b14" bit_15="CH0_ADC_b15"
+    bit_16="CH0_Status_b0" bit_17="CH0_Status_b1" bit_18="CH0_Status_b2" bit_19="CH0_Status_b3" 
+    bit_20="CH0_Overflow" bit_21="CH0_Underflow" bit_22="CH0_Valid" bit_23="CH0_Error"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    
+    <field Name="ADCValue" StartBit="0" EndBit="15" Mask="0x0000FFFF" Resolution="0.001" Bias="0" min="0" max="65" Unit="V" />
+    <field Name="StatusCode" StartBit="16" EndBit="19" Mask="0x000F0000" Resolution="1" />
+    <field Name="Overflow" StartBit="20" EndBit="20" Mask="0x00100000" Resolution="1" fault="1"/>
+    <field Name="Underflow" StartBit="21" EndBit="21" Mask="0x00200000" Resolution="1" fault="1"/>
+    <field Name="Valid" StartBit="22" EndBit="22" Mask="0x00400000" Resolution="1" fault="0"/>
+    <field Name="Error" StartBit="23" EndBit="23" Mask="0x00800000" Resolution="1" fault="1"/>
+  </cbit>
+
+  <!-- Additional channels follow same pattern... -->
+  <cbit Name="Channel1" Offset="36" Size="4" Mask="0xFFFFFFFF" Resolution="1" Visible="true"
+    bit_0="CH1_ADC_b0" bit_1="CH1_ADC_b1" bit_2="CH1_ADC_b2" bit_3="CH1_ADC_b3" 
+    bit_4="CH1_ADC_b4" bit_5="CH1_ADC_b5" bit_6="CH1_ADC_b6" bit_7="CH1_ADC_b7"
+    bit_8="CH1_ADC_b8" bit_9="CH1_ADC_b9" bit_10="CH1_ADC_b10" bit_11="CH1_ADC_b11" 
+    bit_12="CH1_ADC_b12" bit_13="CH1_ADC_b13" bit_14="CH1_ADC_b14" bit_15="CH1_ADC_b15"
+    bit_16="CH1_Status_b0" bit_17="CH1_Status_b1" bit_18="CH1_Status_b2" bit_19="CH1_Status_b3" 
+    bit_20="CH1_Overflow" bit_21="CH1_Underflow" bit_22="CH1_Valid" bit_23="CH1_Error"
+    bit_24="Reserved" bit_25="Reserved" bit_26="Reserved" bit_27="Reserved" 
+    bit_28="Reserved" bit_29="Reserved" bit_30="Reserved" bit_31="Reserved">
+    <field Name="ADCValue" StartBit="0" EndBit="15" Mask="0x0000FFFF" Resolution="0.001" min="0" max="65" Unit="V" />
+    <field Name="Overflow" StartBit="20" EndBit="20" Mask="0x00100000" Resolution="1" fault="1"/>
+    <field Name="Valid" StartBit="22" EndBit="22" Mask="0x00400000" Resolution="1" fault="0"/>
+  </cbit>
+
+</BitSchema>
